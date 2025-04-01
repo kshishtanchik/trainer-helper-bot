@@ -1,0 +1,7 @@
+.vscode/
+**/obj/
+**/bin/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+Backend/WebApiService/appsettings.Development.json
