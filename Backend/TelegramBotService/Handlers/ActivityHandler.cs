@@ -1,4 +1,3 @@
-
 using Telegram.Bot.Types.ReplyMarkups;
 
 public class ActivityHandler : BaseDialogHandler<Activity>
@@ -17,9 +16,9 @@ public class ActivityHandler : BaseDialogHandler<Activity>
 
     public override string CommandName => "/addActivity";
 
-    protected override InlineKeyboardMarkup SaveUserStateModel(DialogState<Activity> userState)
+    protected override InlineKeyboardMarkup SaveDialogStateModel(DialogState<Activity> userState)
     {
-        dataService.CreateOrUpdateActivity(userState.Model, userState.userProfile);
+        dataService.CreateOrUpdateActivity(userState.Model, userState.UserProfile);
         var buttons = new[]
         {
             InlineKeyboardButton.WithCallbackData("Отчет","report_"),

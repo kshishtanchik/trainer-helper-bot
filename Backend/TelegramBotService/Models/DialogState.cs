@@ -22,12 +22,12 @@ public class DialogState<T> where T : class, new()
     public PropertyInfo? CurrentField { get; set; }
 
     /// <summary>
-    /// Последнее отправленное ботом сообщение
+    /// Последнее отправленное ботом сообщение.
     /// </summary>
     public Message? LastMessage { get; internal set; }
 
     /// <summary>
-    /// Профиль пользователя
+    /// Профиль пользователя.
     /// </summary>
-    public UserProfile userProfile { get; set; }
+    public UserProfile UserProfile { get; set; }
 }

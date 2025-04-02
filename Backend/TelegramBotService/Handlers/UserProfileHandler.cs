@@ -8,7 +8,7 @@ public class UserProfileHandler : BaseDialogHandler<UserProfile>
 
     public override string CommandName => "/profile";
 
-    protected override InlineKeyboardMarkup SaveUserStateModel(DialogState<UserProfile> userState)
+    protected override InlineKeyboardMarkup SaveDialogStateModel(DialogState<UserProfile> userState)
     {
         return new InlineKeyboardMarkup();
     }

@@ -16,6 +16,7 @@ public class BotStateManager
         {
             _userStates[userId] = new UserState(userId);
         }
+        
         return _userStates[userId];
     }
 

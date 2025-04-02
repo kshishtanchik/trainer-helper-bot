@@ -84,7 +84,6 @@ public class TelegramBotService : IHostedService
         // Обрабатываем нажатие кнопки
         var callbackQuery = update.CallbackQuery;
         var chatId = callbackQuery.Message.Chat.Id;
-        var data = callbackQuery.Data;
         var userState = _stateManager.GetUserState(chatId);
 
         var command = userState.CurrentCommand;
@@ -96,7 +95,7 @@ public class TelegramBotService : IHostedService
             {
                 From = callbackQuery.From,
                 Chat = callbackQuery.Message.Chat,
-                Text = data
+                Text = callbackQuery.Data
             }, cancellationToken);
         }
     }
